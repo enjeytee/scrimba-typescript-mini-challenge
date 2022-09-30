@@ -1,4 +1,5 @@
 import { Permissions, LoyaltyUser } from "./enums.js";
+import { MainProperty } from "./classes.js";
 export const reviews = [
     {
         name: 'Sheia',
@@ -66,8 +67,27 @@ export const properties = [
         },
         contact: [+1123495082906, "andyluger@aol.com"],
         isAvailable: true
+    },
+    {
+        image: 'images/malaysian-hotel.jpeg',
+        title: 'Malia Hotel',
+        price: 35,
+        address: {
+            street: 'Room 4',
+            city: 'Malia',
+            zipcode: 45334,
+            country: 'Malaysia'
+        },
+        contact: [+60349822083, 'lee34@gmail.com'],
+        isAvailable: false
     }
 ];
+export const mainProperty = new MainProperty([{
+        name: "Olive",
+        stars: 5,
+        loyaltyUser: LoyaltyUser.GOLD_USER,
+        date: "12-04-2021",
+    }], "./images/italian-property.jpg", "Italian House");
 export const isLoggedIn = true;
 export const currentLocation = ["Pampanga, Philippines", "11:30 PM", 26];
 //# sourceMappingURL=constants.js.map

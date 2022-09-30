@@ -8,6 +8,7 @@ const reviewTotalDisplay = document.querySelector("#reviews") as HTMLHeadingElem
 const propertyContainer = document.querySelector(".properties") as HTMLDivElement;
 const footerContainer = document.querySelector(".footer") as HTMLDivElement;
 const reviewContainer = document.querySelector(".reviews") as HTMLDivElement;
+const mainImageContainer = document.querySelector(".main-image") as HTMLDivElement;
 
 const makeMultiple = (reviewCount: number) : string  => {
     return reviewCount > 1 || !reviewCount ? "s" : ""
@@ -29,7 +30,7 @@ export const showDetails = (authorityStatus: boolean | Permissions, properties: 
             propertyContainer.innerHTML += `
                 <div class="card">
                     ${property.title}
-                    <img src=${property.image}></img>
+                    <img src=${property.image} width="100%"></img>
                     <div>${property.price} / night</div>
                 </div>
             `
@@ -53,6 +54,4 @@ export const addReviews = (reviews: Review[]) : void => {
         `
     })
 };
-
-
 
